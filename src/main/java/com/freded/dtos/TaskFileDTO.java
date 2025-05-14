@@ -18,7 +18,7 @@ public class TaskFileDTO {
     private String fileType;
 
 
-    private LocalDateTime uploadedAt;
+    private LocalDateTime createdAt;
 
 
 }

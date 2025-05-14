@@ -28,7 +28,7 @@ public class TaskFileEntity {
 
     private String fileType;
 
-    private LocalDateTime uploadedAt;
+    private LocalDateTime createdAt;
 
     private String uploadedBy;
 
@@ -40,6 +40,6 @@ public class TaskFileEntity {
 
     @PrePersist
     protected void onCreate() {
-        uploadedAt = LocalDateTime.now();
+        createdAt = LocalDateTime.now();
     }
 }
