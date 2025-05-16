@@ -65,7 +65,7 @@
         <repository>
             <id>github</id>
             <name>GitHub Packages</name>
-            <url>${github-package.url</url>
+            <url>${github-package.url}</url>
         </repository>
     </repositories>
 
@@ -73,7 +73,7 @@
         <repository>
             <id>github</id>
             <name>GitHub Packages</name>
-            <url>${github-package.url</url>
+            <url>${github-package.url}</url>
         </repository>
     </distributionManagement>
 </project>
