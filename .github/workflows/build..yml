@@ -1,4 +1,4 @@
-name: Build and package task manager Quarkus app
+name: Build and package shared resources
 
 on:
   push:
@@ -13,8 +13,12 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4.1.1
 
-      - name: Setup environment
-        uses: ./.github/actions/setup-environment
+      - name: Set up JDK 21
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+          cache: 'maven'
 
       # Cache Maven dependencies
       - name: Cache Maven packages
