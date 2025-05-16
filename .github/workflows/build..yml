@@ -40,12 +40,18 @@ jobs:
           </settings>
           EOF
 
-      - name: Cache Maven packages
+      - name: Clear cached Maven metadata for this package
+        run: rm -rf ~/.m2/repository/com/freded/task-shared-resources
+
+      - name: Cache Maven dependencies
         uses: actions/cache@v4
         with:
-          path: ~/.m2
+          path: ~/.m2/repository
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
+
+      - name: Clear cached metadata for your package
+        run: rm -rf ~/.m2/repository/com/freded/task-shared-resources
 
       - name: Build and publish JAR
         run: mvn deploy -DskipTests
