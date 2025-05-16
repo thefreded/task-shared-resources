@@ -9,6 +9,14 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
+    permissions:
+      # Grant read access to repository contents
+      contents: read
+      # Grant write access to push packages to GHCR
+      packages: write
+      # Grant read access to actions
+      actions: read
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4.1.1
