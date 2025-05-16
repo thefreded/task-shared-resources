@@ -16,6 +16,7 @@
         <quarkus-hibernate-validator.version>3.20.0</quarkus-hibernate-validator.version>
         <quarkus-hibernate-orm.version>3.20.0</quarkus-hibernate-orm.version>
         <quarkus-rest-jackson.version>3.20.0</quarkus-rest-jackson.version>
+        <github-package.url>https://maven.pkg.github.com/the_freded/task-shared-resources</github-package.url>
     </properties>
 
     <dependencies>
@@ -59,4 +60,20 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <repositories>
+        <repository>
+            <id>github</id>
+            <name>GitHub Packages</name>
+            <url>${github-package.url</url>
+        </repository>
+    </repositories>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub Packages</name>
+            <url>${github-package.url</url>
+        </repository>
+    </distributionManagement>
 </project>
