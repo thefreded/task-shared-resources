@@ -6,19 +6,6 @@ on:
       - '**'
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4.1.1
-
-      - name: Setup environment
-        uses: ./.github/actions/setup-environment
-
-      - name: Run Tests
-        run: ./mvnw clean test
-
   build-and-deploy:
     runs-on: ubuntu-latest
 

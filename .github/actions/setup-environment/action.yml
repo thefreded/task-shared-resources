@@ -10,6 +10,6 @@ runs:
         java-version: '21'
         cache: 'maven'
 
-    - name: Grant execute permissions to Maven Wrapper
-      run: chmod +x mvnw
+    - name: Grant execute permissions to Maven
+      run: chmod +x mvn
       shell: bash
