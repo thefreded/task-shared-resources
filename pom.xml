@@ -60,14 +60,7 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
-    <repositories>
-        <repository>
-            <id>github</id>
-            <name>GitHub Packages</name>
-            <url>${github-package.url}</url>
-        </repository>
-    </repositories>
+    
 
     <distributionManagement>
         <repository>
