@@ -32,9 +32,6 @@ jobs:
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
 
-      - name: Clear cached metadata for your package
-        run: rm -rf ~/.m2/repository/com/freded/task-shared-resources
-
       - name: Build and publish JAR
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
