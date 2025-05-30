@@ -12,10 +12,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <lombok.version>1.18.34</lombok.version>
-        <jakarta.ws.rs.version>3.1.0</jakarta.ws.rs.version>
-        <quarkus-hibernate-validator.version>3.20.0</quarkus-hibernate-validator.version>
-        <quarkus-hibernate-orm.version>3.20.0</quarkus-hibernate-orm.version>
-        <quarkus-rest-jackson.version>3.20.0</quarkus-rest-jackson.version>
         <github-package.url>https://maven.pkg.github.com/thefreded/task-shared-resources</github-package.url>
     </properties>
 
@@ -27,38 +23,6 @@
             <scope>provided</scope>
         </dependency>
 
-        <dependency>
-            <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-hibernate-orm</artifactId>
-            <version>${quarkus-hibernate-orm.version}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-hibernate-validator</artifactId>
-            <version>${quarkus-hibernate-validator.version}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>jakarta.ws.rs</groupId>
-            <artifactId>jakarta.ws.rs-api</artifactId>
-            <version>${jakarta.ws.rs.version}</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-rest-jackson</artifactId>
-            <version>${quarkus-rest-jackson.version}</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>3.8.1</version>
-            <scope>test</scope>
-        </dependency>
     </dependencies>
 
 
