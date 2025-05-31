@@ -45,6 +45,8 @@ public class TaskDTO {
 
     private List<TaskFileDTO> taskFiles = new ArrayList<>();
 
+    private String createdBy;
+
 
 }
 
