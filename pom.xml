@@ -4,7 +4,7 @@
     <groupId>com.freded</groupId>
     <artifactId>task-shared-resources</artifactId>
     <packaging>jar</packaging>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <name>task-shared-resources</name>
     <url>http://maven.apache.org</url>
 
