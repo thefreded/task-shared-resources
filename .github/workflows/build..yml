@@ -35,6 +35,14 @@ jobs:
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
 
+      - name: Use custom Maven settings.xml with GitHub credentials
+        run: |
+          mkdir -p ~/.m2
+          cp ./.github/settings/maven-settings.xml ~/.m2/settings.xml
+          sed -i "s/\${env.GITHUB_ACTOR}/${{ github.actor }}/g" ~/.m2/settings.xml
+          sed -i "s/\${env.GITHUB_TOKEN}/${{ secrets.GITHUB_TOKEN }}/g" ~/.m2/settings.xml
+          cat ~/.m2/settings.xml          
+
       - name: Determine version bump from all commits in PR merge
         id: determine_bump
         run: |
@@ -95,8 +103,6 @@ jobs:
           GITHUB_ACTOR: ${{ github.actor }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: mvn deploy -DskipTests
-
-
 
       - name: Commit and Push Version Bump
         run: |
