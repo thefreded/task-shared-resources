@@ -1,35 +1,19 @@
 package com.freded.dtos;
 
-import com.freded.dtos.interfaces.PageableAndSortable;
+import com.freded.dtos.interfaces.Sortable;
 import jakarta.ws.rs.DefaultValue;
 import jakarta.ws.rs.QueryParam;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
 /**
- * DTO combining pagination and sorting functionality. Contains parameters to control the offset, limit, sorting field,
- * and sorting order.
+ * Base DTO for sorting parameters. Contains sorting field and order information.
  */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class PaginationAndSortingDTO implements PageableAndSortable {
-    /**
-     * The starting point of the data to be sent as result. Default is 0.
-     */
-    @QueryParam("offset")
-    @DefaultValue("0")
-    private int offset;
-
-    /**
-     * Maximum number of data to be sent as result. Default is 10.
-     */
-    @QueryParam("limit")
-    @DefaultValue("10")
-    private int limit;
-
+public class SortingDTO implements Sortable {
     /**
      * Field that should be used as sorting value. Default is {@code createdAt}.
      */

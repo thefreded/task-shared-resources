@@ -8,15 +8,17 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
+/**
+ * DTO for TaskFile pagination and sorting with specific default sorting field.
+ */
 @EqualsAndHashCode(callSuper = true)
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class TaskFileSortAndPaginationDTO extends PaginationAndSortingDTO {
+public class TaskFilePaginationAndSortingDTO extends PaginationAndSortingDTO {
 
     /**
-     * Field that should be used as sorting value.
-     * Default is {@code uploadedBy}.
+     * Field that should be used as sorting value. Default is {@code fileName}.
      */
     @QueryParam("sortBy")
     @DefaultValue("fileName")
