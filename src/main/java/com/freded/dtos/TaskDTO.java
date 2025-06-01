@@ -5,8 +5,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * DTO for task
@@ -43,8 +41,9 @@ public class TaskDTO {
      */
     private LocalDateTime updatedAt;
 
-    private List<TaskFileDTO> taskFiles = new ArrayList<>();
-
+    /**
+     * Creator of task.
+     */
     private String createdBy;
 
 
