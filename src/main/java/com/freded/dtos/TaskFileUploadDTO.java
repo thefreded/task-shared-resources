@@ -1,25 +1,19 @@
 package com.freded.dtos;
 
-import jakarta.ws.rs.FormParam;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.jboss.resteasy.reactive.PartType;
+import org.jboss.resteasy.reactive.RestForm;
+import org.jboss.resteasy.reactive.multipart.FileUpload;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class TaskFileUploadDTO {
 
-    @FormParam("fileName")
-    @PartType("text/plain")
+    @RestForm("fileName")
     private String fileName;
 
-    @FormParam("fileType")
-    @PartType("text/plain")
-    private String fileType;
-
-    @FormParam("file")
-    @PartType("application/octet-stream")
-    private byte[] fileData;
+    @RestForm("file")
+    private FileUpload fileUpload;
 }
