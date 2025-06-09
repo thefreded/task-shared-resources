@@ -4,11 +4,10 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
 
 /**
- * DTO for task file information.
- * Contains metadata about files associated with tasks.
+ * DTO for task file information. Contains metadata about files associated with tasks.
  */
 @Data
 @AllArgsConstructor
@@ -33,5 +32,5 @@ public class TaskFileDTO {
     /**
      * Timestamp when the file was created.
      */
-    private LocalDateTime createdAt;
+    private ZonedDateTime createdAt;
 }

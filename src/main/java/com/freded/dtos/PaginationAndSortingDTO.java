@@ -1,6 +1,5 @@
 package com.freded.dtos;
 
-import com.freded.dtos.interfaces.PageableAndSortable;
 import jakarta.ws.rs.DefaultValue;
 import jakarta.ws.rs.QueryParam;
 import lombok.AllArgsConstructor;
@@ -15,7 +14,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class PaginationAndSortingDTO implements PageableAndSortable {
+public class PaginationAndSortingDTO {
     /**
      * The starting point of the data to be sent as result. Default is 0.
      */

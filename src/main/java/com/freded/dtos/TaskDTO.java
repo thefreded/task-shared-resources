@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
 
 /**
  * DTO for task
@@ -32,14 +32,14 @@ public class TaskDTO {
     private String description;
 
     /**
-     * The local date time that the task was created.
+     * The zoned date time that the task was created.
      */
-    private LocalDateTime createdAt;
+    private ZonedDateTime createdAt;
 
     /**
-     * The local date time when the task was updated (or last updated).
+     * The zoned date time when the task was updated (or last updated).
      */
-    private LocalDateTime updatedAt;
+    private ZonedDateTime updatedAt;
 
     /**
      * Creator of task.
