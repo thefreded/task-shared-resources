@@ -1,4 +1,4 @@
-package com.freded.dtos;
+package com.freded.common.dto;
 
 import jakarta.ws.rs.DefaultValue;
 import jakarta.ws.rs.QueryParam;
