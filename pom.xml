@@ -1,0 +1,44 @@
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.freded</groupId>
+    <artifactId>task-shared-resources</artifactId>
+    <packaging>jar</packaging>
+    <version>2.0.5</version>
+    <name>task-shared-resources</name>
+    <url>http://maven.apache.org</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <lombok.version>1.18.34</lombok.version>
+        <quarkus-rest-jackson.version>3.20.0</quarkus-rest-jackson.version>
+        <github-package.url>https://maven.pkg.github.com/thefreded/task-shared-resources</github-package.url>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-rest-jackson</artifactId>
+            <version>${quarkus-rest-jackson.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+    </dependencies>
+
+
+    <distributionManagement>
+        <repository>
+            <id>github-shared-resources</id>
+            <name>Shared Resources Package</name>
+            <url>${github-package.url}</url>
+        </repository>
+    </distributionManagement>
+</project>
