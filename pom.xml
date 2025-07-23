@@ -13,6 +13,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <lombok.version>1.18.34</lombok.version>
         <quarkus-rest-jackson.version>3.20.0</quarkus-rest-jackson.version>
+        <quarkus-hibernate-orm.version>3.20.0</quarkus-hibernate-orm.version>
         <github-package.url>https://maven.pkg.github.com/thefreded/task-shared-resources</github-package.url>
     </properties>
 
@@ -28,6 +29,13 @@
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-rest-jackson</artifactId>
             <version>${quarkus-rest-jackson.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-hibernate-orm</artifactId>
+            <version>${quarkus-hibernate-orm.version}</version>
             <scope>provided</scope>
         </dependency>
 
